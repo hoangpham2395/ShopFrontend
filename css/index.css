@@ -1,0 +1,239 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	font-family: arial;
+	font-size: 14px;
+	color: #333333;
+}
+#header {
+	background-color: #ff9600;
+	height: auto;
+}
+#logo, #search, #cart {
+	height: 98px;
+}
+#logo > h1 {
+	margin: 0px;
+}
+#logo > h1 > button {
+	background-color: #fff;
+	margin-top: 30px;
+}
+#logo > h1 > button > span {
+	background-color: #ff9600;
+}
+#search input[type=text] {
+	width: 330px;
+	height: 35px;
+	color: #fff;
+	background: transparent; /*trong suốt*/
+	border: 1px solid #fff;
+	padding-left: 15px;
+}
+#search input[type=submit] {
+	width: 100px;
+	height: 35px;
+	background-color: #fff;
+	color: #ff9600;
+	border: none;
+}
+#search input {
+	float: left;
+	margin-top: 30px;
+}
+/*sửa color placeholder do ảnh hưởng của bootstrap*/
+::-webkit-input-placeholder{color:#fff}
+
+#cart {
+	background: url(../images/cart.png) no-repeat;
+	line-height: 98px;
+}
+#cart a {
+	font-weight: bold;
+	color: #fff;
+}
+#cart a:hover {
+	text-decoration: none; /*do ảnh hưởng của boostrap, bình thường khi hover vào a sẽ có gạch dưới*/
+}
+#cart span {
+	margin-left: 57px;
+	font-weight: bold;
+	color: #ff9600;
+}
+
+/*main-body*/
+#body {
+	margin-top: 15px;
+}
+
+/*menu*/
+#menu {
+	border: 1px solid #ddd;
+}
+#menu ul {
+	margin: 0px; /*thông thường ul có margin-bottom:10px;*/
+}
+#menu ul li {
+	height: 40px;
+	line-height: 40px;
+	list-style: none;
+	padding-left: 15px;
+	border-bottom: 1px solid #ddd;
+}
+#menu ul li a {
+	color: #333;
+}
+#menu ul li a:hover {
+	text-decoration: none;
+}
+#menu ul li:hover{
+	background-color: #f5f5f5;
+	cursor: pointer; /*khi di chuột thì chuột biến đổi thành bàn tay*/
+}
+#menu ul li:first-child {
+	background-color: #f5f5f5;
+	text-transform: uppercase;
+}
+#menu ul li:last-child {
+	border: none; /*xóa border-bottom của li cuối để tránh trùng với border của menu*/
+}
+
+/*sửa lỗi menu navar collapse*/
+.navbar-collapse {
+	padding: 0;
+}
+
+/*banner-left*/
+.banner-left-item {
+	margin-top: 15px;
+}
+.banner-left-item a img {
+	width: 100%;
+}
+
+/*banner-top*/
+#banner-top {
+	margin-top: 15px;
+}
+#banner-top a img {
+	width: 100%;
+}
+
+/*products*/
+.products {
+	margin-top: 30px;
+	overflow: hidden; /*cho phần bị float nhìn thấy những phần không bị float*/
+}
+.products > h3 {
+	text-transform: uppercase;
+	color: #ff9600;
+	font-size: 18px;
+	margin-bottom: 15px;
+}
+.product-item {
+	border: 1px solid #ddd;
+	padding: 15px;
+	position: relative;
+}
+.product-item img {
+	margin-bottom: 15px;
+}
+.product-item > p > a {
+	color: #333;
+}
+.product-item > p > a:hover {
+	text-decoration: none;
+}
+.price {
+	color: #d60000;
+	font-weight: bold;
+}
+.layer {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: #000;
+	top: 0px; left: 0px;
+	opacity: 0.75; /*độ trong suốt từ 0-1 cho toàn bộ điv này*/
+}
+.more {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -36px; /*kỹ thuật căn giữa text, dựa vào độ rộng của text (Xem chi tiết có độ rộng khoảng 72px)*/
+}
+.product-item .more a {
+	color: #fff;
+}
+.layer, .more {
+	display: none;
+}
+.product-item:hover .layer, .product-item:hover .more {
+	display: block;
+}
+
+/*footer-top*/
+#footer-top {
+	background: #ff9600;
+	color: #fff;
+	margin-top: 30px;
+	padding: 15px 0 15px 0;
+}
+
+/*footer-bottom*/
+#footer-bottom {
+	background-color: #ff6700;
+	font-size: 12px;
+	color: #fff;
+	position: relative;
+}
+
+#footer-bottom-left, #footer-bottom-right {
+	padding: 44px 15px;
+}
+
+#footer-bottom-left > a, #footer-bottom-right > a {
+	color: #fff;
+}
+
+#footer-bottom-left > a:hover, #footer-bottom-right > a:hover {
+	text-decoration: none;
+}
+#footer-bottom a {
+	color: #fff;
+	float: left;
+}
+#scroll {
+	position: absolute;
+	top: 0; right: 0;
+}
+
+/*Sử dụng media để thay đổi thuộc tính khi thay đổi màn hình: smartphone, máy tính băng, laptop
+ *media luôn nằm cuối file css vì media yếu nhất, để cuối để media có thể đè các id, class trước*/
+/*màn hình máy tính bảng trở xuống*/
+@media (max-width: 992px) {
+	#search, #cart {display: none;}
+	#footer-bottom-right {
+		text-align: left;
+	}
+}
+/*màn hình laptop từ 992px đến 1200px*/
+@media (min-width: 992px) and (max-width: 1200px) {
+	#cart span {
+		margin-left: 54px;
+	}
+	#search input[type=text]{
+		margin-left: 20px;
+	}
+}
+
+/*sửa lỗi button search*/
+@media (max-width: 370px) {
+	#logo img{
+		width: 60%;
+	}
+	
+}

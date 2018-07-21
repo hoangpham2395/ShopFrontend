@@ -1,0 +1,141 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 29, 2016, 8:30:52 PM
+    Author     : PHAM HUY HOANG
+*/
+* {
+    padding: 0px;
+    margin: 0px;
+}
+body {
+    //text-align: center;
+    background-image: url("image/nen_main.PNG");
+}
+
+#top {
+    height: 120px;
+    background-color: darkcyan;
+}
+#top1 {
+    width: 160px;
+    float: left;
+    padding-top: 10px;
+    padding-left: 170px;
+}
+#top2 {
+    width: 500px;
+    height: 70px;
+    float: left;
+    padding-top: 50px;
+    padding-left: 150px;
+}
+#top2 input[type=text] {
+    height: 30px;
+    border:none;
+    padding-left: 10px;
+    border: solid 1px #fff;
+    background: transparent;
+    color: #fff;
+}
+#top2 input[type=submit] {
+    height: 32px;
+    width: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+    background-color: #fff;
+    color: darkcyan;
+}
+/*sửa color placeholder do ảnh hưởng của bootstrap*/
+::-webkit-input-placeholder{color:#fff}
+#top2 input {
+    float: left;
+}
+#top3 {
+    float: right;
+    padding-top: 10px;
+    padding-right: 20px;
+}
+
+#main {
+    height: 1100px;
+    //background-color: white;
+    width: 1150px;
+    margin-left: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+#mainrighttop {
+    //border: 1px solid gray;
+    background-color: white;
+    margin-bottom: 5px;
+}
+#mainleft {
+    width: 245px;
+    height: 960px;
+    //background-color: white;
+    float: left;
+    margin-right: 5px;
+}
+.menu {
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    color: white;
+    background-color: darkcyan;
+}
+.submenu {
+    text-align: left; /*Căn lề trái*/
+    background-color: white;
+    //height: 200px;
+}
+.submenu ul {
+    list-style-type: none; /*Bỏ dấu chấm ở thẻ <li>*/
+    padding: 0px;
+}
+.submenu ul li {
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid gray;
+}
+.submenu ul li:hover /*doi mau nen*/
+{
+    background-color: gray;
+}
+.submenu ul li a {
+    text-decoration: none; /*bo gach duoi the <li>*/
+    color: black;
+}
+.submenu ul li:hover a /*doi mau chu*/
+{
+    color: #ffffff;
+}
+#left2 ul li {
+    //padding-left: 90px;
+    text-align: center;
+}
+#left4 ul li {
+     padding-left: 70px;
+}
+
+
+#mainright {
+    
+    width: 900px;
+    height: 960px;
+    background-color: white;
+    float: left;
+}
+
+#bottom {
+    height: 150px;
+    line-height: 150px;
+    background-color: darkcyan;
+    text-align: center;
+    color: white;
+}
